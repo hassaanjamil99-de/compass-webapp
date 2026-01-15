@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Compass Web App</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111111">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <h1>Compass</h1>
+
+    <div class="dial" aria-label="Compass dial">
+      <div class="north">N</div>
+      <div class="east">E</div>
+      <div class="south">S</div>
+      <div class="west">W</div>
+
+      <div class="needle" id="needle"></div>
+      <div class="center"></div>
+    </div>
+
+    <div class="readout">
+      <div><b>Heading:</b> <span id="headingText">--</span>°</div>
+      <div><b>Accuracy:</b> <span id="accuracyText">--</span></div>
+      <div class="small" id="status">Tap “Enable Sensor”.</div>
+    </div>
+
+    <button id="enableBtn">Enable Sensor</button>
+
+    <details class="help">
+      <summary>Troubleshooting</summary>
+      <ul>
+        <li>On iPhone, sensor access usually requires HTTPS + permission.</li>
+        <li>Rotate phone in a “figure-8” to calibrate.</li>
+        <li>Some browsers/devices don’t expose true compass heading (only relative rotation).</li>
+      </ul>
+    </details>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
